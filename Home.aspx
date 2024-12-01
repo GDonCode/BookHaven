@@ -5,8 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" style="padding: 0;">
 <head runat="server">
     <title></title>
+
+                                                              <%--OPEN SANS FONT--%>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <style>
+        body {
+            padding: 0; 
+            margin: 0; 
+            width: 100%;
+            height: 100%;
+            font-family: "Open Sans", sans-serif;
+        }
         .carousel-item {
             height: 34rem;
             position: relative;
@@ -50,6 +63,20 @@
         }
         .category-button:hover {
             font-size: 1.25rem;
+        }
+        .browse_all-button {
+            cursor: pointer;
+            background-color: #f5e04d;
+            border: 2px solid black;
+            font-size: 1.5rem;
+            transition: font-size 0.3s ease;
+            padding: 0 25px;
+            width: min-content;
+            margin: 50px auto 20px auto;
+            display: block;
+        }
+        .browse_all-button:hover {
+            font-size: 1.75rem;
         }
         .auto-style1 {
             position: absolute;
@@ -112,7 +139,7 @@
         }
     </style>
 </head>
-<body style="padding: 0; margin: 0; width: 100%;height: 100%;">
+<body>
     <form id="form1" runat="server" style="position: relative;min-height: 100vh;padding-bottom: 120px;box-sizing: border-box;">
          
                                     <%--  NAV--%>
@@ -201,6 +228,8 @@
             </div>
         </div>
 
+                                                    <%--  CATEGORIES --%>
+
         <div class="category">
             <asp:Label ID="Label33" runat="server" Text="Explore Different Categories" class="subheading" style="margin: 0 auto;"></asp:Label>
             <div class="category-container">
@@ -244,6 +273,9 @@
                 </div>
             </div>
         </div>
+
+            <asp:Button ID="Button10" runat="server" Text="Browse All" class="browse_all-button" />
+
                                            <%--FOOTER--%>
 
     <div style="background-color: #43b14b;display: flex;margin-top: 20px;justify-content: space-around;padding: 10px;" class="auto-style1">
