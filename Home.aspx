@@ -75,10 +75,22 @@
             <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/Content/images/logo.png" Width="100px"/>
                                   <%--  NAV LINKS --%>
             <div style="display: flex;gap: 100px;margin-left: -16px;">
-                <a href="#" class="nav-link"><asp:Label ID="Label1" runat="server" Text="Browse Books"></asp:Label></a>
-                <a href="#" class="nav-link"><asp:Label ID="Label2" runat="server" Text="User Account"></asp:Label></a>
-                <a href="#" class="nav-link"><asp:Label ID="Label3" runat="server" Text="Contact Us"></asp:Label></a>
-                <a href="#" class="nav-link"><asp:Label ID="Label4" runat="server" Text="Shopping Cart"></asp:Label></a>
+                <a href="#" class="nav-link">
+                    <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
+                    <asp:Label ID="Label1" runat="server" Text="Browse Books"></asp:Label>
+                </a>
+                <a href="#" class="nav-link">
+                    <asp:Image ID="Image9" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
+                    <asp:Label ID="Label2" runat="server" Text="User Account" ></asp:Label>
+                </a>
+                <a href="#" class="nav-link">
+                    <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
+                    <asp:Label ID="Label3" runat="server" Text="Contact Us"></asp:Label>
+                </a>
+                <a href="#" class="nav-link">
+                    <asp:Image ID="Image11" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/shopping-cart.png" />
+                    <asp:Label ID="Label4" runat="server" Text="Shopping Cart"></asp:Label>
+                </a>
             </div>
         </div>
         <br />
