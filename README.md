@@ -31,7 +31,7 @@ To get a local copy of this repository:
 ### 5. Push Your Changes
 To upload your changes:
 
-    1. In the **Git Changes** window, click **Push**.
+   1. In the **Git Changes** window, click **Push**.
 
 ### Pull Changes from Others
 To get updates from others:
