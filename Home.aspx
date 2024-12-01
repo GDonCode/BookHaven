@@ -39,7 +39,18 @@
         .add_to_cart:hover {
             font-size: 1.25rem;
         }
-
+        .category-button {
+            cursor: pointer;
+            background-color: #f5e04d;
+            border: 2px solid black;
+            font-size: 1rem;
+            transition: font-size 0.3s ease;
+            padding: 0 25px;
+            margin-top: 10px;
+        }
+        .category-button:hover {
+            font-size: 1.25rem;
+        }
         .auto-style1 {
             position: absolute;
             bottom: 0;
@@ -63,7 +74,42 @@
             border-bottom: 2px solid #f5e04d;
             font-size: 1.5rem;
         }
-
+        .category {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 100px;
+        }
+        .category-container {
+            display: flex;
+            align-content: center;
+            gap: 100px;
+            margin: 0 auto;
+        }
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 10px solid #f5e04d;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            gap: 5px;
+        }
+        .category-item--title {
+            font-size: 1.25rem;
+            text-decoration: underline;
+        }
+        .subheading {
+            text-decoration: underline;
+            font-size: 20px;
+        }
+        .footer-heading {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body style="padding: 0; margin: 0; width: 100%;height: 100%;">
@@ -101,7 +147,7 @@
             <p>
             <asp:Label ID="Label6" runat="server" Text="Dive into a world of stories, knowledge, and adventure with our vast collection of books. Whether you're a fan of thrilling mysteries, timeless classics, or the latest bestsellers, Book Haven has something for everyone."></asp:Label>
             </p>
-            <asp:Label ID="Label16" runat="server" Text="Featured Books" style="text-decoration: underline;font-size: 20px;"></asp:Label> 
+            <asp:Label ID="Label16" runat="server" Text="Featured Books" class="subheading"></asp:Label> 
         </div>
         
         <div style="background-color: #f5e04d; width: 50%; margin: 0 auto;">
@@ -130,7 +176,7 @@
                             <div style="display: flex;flex-direction: column;">
                                 <asp:Label ID="Label9" runat="server" Text="To Kill a Mockingbird by Harper Lee"></asp:Label>
                                 <asp:Label ID="Label10" runat="server" Text="$16.00"></asp:Label>
-                                <asp:Button ID="Button4" runat="server" Text="Add to Cart" class="add_to_cart"/>
+                                <asp:Button ID="Button4" runat="server" Text="Add to Cart" class="add_to_cart" />
                             </div>
                         </div>
                     </div>
@@ -141,7 +187,7 @@
                              <div style="display: flex;flex-direction: column;">
                                 <asp:Label ID="Label11" runat="server" Text="The DaVinci Code by Dan Brown"></asp:Label>
                                 <asp:Label ID="Label12" runat="server" Text="$35.00"></asp:Label>
-                                 <asp:Button ID="Button5" runat="server" Text="Add to Cart" class="add_to_cart"/>
+                                 <asp:Button ID="Button5" runat="server" Text="Add to Cart" class="add_to_cart" />
                             </div>
                         </div>
                     </div>
@@ -155,11 +201,54 @@
             </div>
         </div>
 
+        <div class="category">
+            <asp:Label ID="Label33" runat="server" Text="Explore Different Categories" class="subheading" style="margin: 0 auto;"></asp:Label>
+            <div class="category-container">
+                <div class="category-item">
+                    <asp:Image ID="Image12" runat="server" Height="250px" ImageUrl="~/Content/images/the_woman_in_the_window.jpg" />
+                    <asp:Label ID="Label21" runat="server" Text="Mystery" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label26" runat="server" Text="Unravel secrets and solve thrilling mysteries."></asp:Label>
+                    <asp:Button ID="Button1" runat="server" Text="Explore" class="category-button" />
+                </div>
+                <div class="category-item">
+                    <asp:Image ID="Image13" runat="server" Height="250px" ImageUrl="~/Content/images/steve_jobs.jpg"/>
+                    <asp:Label ID="Label22" runat="server" Text="Biography" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label27" runat="server" Text="Discover the lives that shaped history."></asp:Label>
+                    <asp:Button ID="Button2" runat="server" Text="Explore" class="category-button" />
+                </div>
+                <div class="category-item"> 
+                    <asp:Image ID="Image14" runat="server" Height="250px" ImageUrl="~/Content/images/the_left_hand_of_darkness.jpg"/>
+                    <asp:Label ID="Label23" runat="server" Text="Science Fiction" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label28" runat="server" Text="Venture into realms of the unknown and beyond."></asp:Label>
+                    <asp:Button ID="Button6" runat="server" Text="Explore" class="category-button" />
+                </div>
+            </div>
+            <div class="category-container">
+                <div class="category-item">
+                    <asp:Image ID="Image15" runat="server" Height="250px" ImageUrl="~/Content/images/the_rosie_project.jpg"/>
+                    <asp:Label ID="Label24" runat="server" Text="Romance" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label29" runat="server" Text="Feel the magic of love and heartfelt connections."></asp:Label>
+                    <asp:Button ID="Button7" runat="server" Text="Explore" class="category-button" />
+                </div>
+                <div class="category-item">
+                    <asp:Image ID="Image16" runat="server" Height="250px" ImageUrl="~/Content/images/the_wright_brothers.jpg"/>
+                    <asp:Label ID="Label25" runat="server" Text="History" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label30" runat="server" Text="Explore the stories of our collective past."></asp:Label>
+                    <asp:Button ID="Button8" runat="server" Text="Explore" class="category-button" />
+                </div>
+                <div class="category-item">
+                    <asp:Image ID="Image17" runat="server" Height="250px" ImageUrl="~/Content/images/sharp_objects.jpg"/>
+                    <asp:Label ID="Label31" runat="server" Text="Thriller" class="category-item--title"></asp:Label>
+                    <asp:Label ID="Label32" runat="server" Text="Unpredictable, chilling, and filled with deep secrets."></asp:Label>
+                    <asp:Button ID="Button9" runat="server" Text="Explore" class="category-button" />
+                </div>
+            </div>
+        </div>
                                            <%--FOOTER--%>
 
     <div style="background-color: #43b14b;display: flex;margin-top: 20px;justify-content: space-around;padding: 10px;" class="auto-style1">
         <div style="display: flex;flex-direction: column;gap: 10px;">
-            <asp:Label ID="Label20" runat="server" Text="Follow our Social Media:" style="font-size: 20px;"></asp:Label>
+            <asp:Label ID="Label20" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
             <div style="display: flex;gap: 10px;">
                 <a href="https://www.instagram.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image5" runat="server" Height="30px" ImageUrl="~/Content/images/instagram.png" Width="30px" /><asp:Label ID="Label17" runat="server" Text="Instagram" style="margin-right: 10px;"></asp:Label></a>
                 <a href="https://www.x.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image6" runat="server" Height="30px" ImageUrl="~/Content/images/x.png" Width="30px" /><asp:Label ID="Label18" runat="server" Text="X (Twitter)" style="margin-right: 10px;"></asp:Label></a>
@@ -167,7 +256,7 @@
             </div>
         </div>
         <div style="display: flex;flex-direction: column;">
-            <asp:Label ID="Label14" runat="server" Text="Contact Information" style="font-size: 20px;"></asp:Label>
+            <asp:Label ID="Label14" runat="server" Text="Contact Information" class="footer-heading"></asp:Label>
             <asp:Label ID="Label13" runat="server" Text="EMAIL: support@bookhaven.com"></asp:Label>
             <asp:Label ID="Label15" runat="server" Text="TEL: 123-456-789"></asp:Label>
         </div>
