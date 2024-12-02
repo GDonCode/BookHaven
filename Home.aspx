@@ -105,7 +105,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             margin-top: 100px;
         }
         .category-container {
@@ -124,6 +124,11 @@
             width: 300px;
             text-align: center;
             gap: 5px;
+            transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in;
+        }
+        .category-item:hover {
+            transform: translateY(-15px);
+            box-shadow: 10px 10px 5px rgba(77, 98, 245, 0.5);
         }
         .category-item--title {
             font-size: 1.25rem;
@@ -144,8 +149,8 @@
          
                                     <%--  NAV--%>
 
-        <div style="background-color: #43b14b; display: flex;flex-direction: column; align-items: center; justify-content: space-between;padding-top: 10px;">
-            <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="~/Content/images/logo.png" Width="100px"/>
+        <div style="background-color: #4d62f5; display: flex;flex-direction: column; align-items: center; justify-content: space-between;padding-top: 10px;">
+            <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
                                   <%--  NAV LINKS --%>
             <div style="display: flex;gap: 100px;margin-left: -16px;">
                 <a href="#" class="nav-link">
