@@ -11,7 +11,7 @@ namespace BookHaven
 {
 
 
-    public partial class form
+    public partial class Cart
     {
 
         /// <summary>
