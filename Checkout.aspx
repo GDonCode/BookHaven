@@ -68,12 +68,10 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 100px;
+            height: 80px;
             left: 0px;
-            margin-bottom: 0px;
-            background-color: #4d62f5;
+            background-color: #4DF5E0;
             display: flex;
-            margin-top: 20px;
             justify-content: space-around;
             padding: 10px;
         }
@@ -103,6 +101,7 @@
         .main  {
             padding: 20px 0;
             flex-grow: 1;
+            margin-bottom: 150px;
         }
 
     </style>
@@ -111,12 +110,12 @@
     <form id="form1" runat="server" style="text-align: center;position: relative;">
                                     <%--  NAV--%>
 
-<div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:space-evenly; padding: 10px 0;">
+<div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content: center;padding: 10px 0;">
     
                           <%--  NAV LINKS --%>
     <div class="nav-link_container">
         <a href="Browse.aspx" class="nav-link">
-            <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
+            <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png"/>
             <asp:Label ID="Label19" runat="server" Text="Browse Books"></asp:Label>
         </a>
         <a href="User.aspx" class="nav-link">
@@ -124,7 +123,7 @@
             <asp:Label ID="Label20" runat="server" Text="User Account" ></asp:Label>
         </a>
     </div>
-    <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
+    <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px" style="margin: 0 20px;"/>
     <div class="nav-link_container">
         <a href="Contact.aspx" class="nav-link">
             <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
@@ -224,7 +223,24 @@
 
          </div>
     </div>
-                                              
+                                                                  
+
+        <div class="footer">
+            <div style="display: flex;flex-direction: column;gap: 10px;">
+                <asp:Label ID="Label23" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
+                <div style="display: flex;gap: 10px;">
+                    <a href="https://www.instagram.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image5" runat="server" Height="30px" ImageUrl="~/Content/images/instagram.png" Width="30px" /><asp:Label ID="Label24" runat="server" Text="Instagram" style="margin-right: 10px;"></asp:Label></a>
+                    <a href="https://www.x.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image6" runat="server" Height="30px" ImageUrl="~/Content/images/x.png" Width="30px" /><asp:Label ID="Label25" runat="server" Text="X (Twitter)" style="margin-right: 10px;"></asp:Label></a>
+                    <a href="https://www.tiktok.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image7" runat="server" Height="30px" ImageUrl="~/Content/images/tiktok.png" Width="30px" /><asp:Label ID="Label26" runat="server" Text="TikTok" style="margin-right: 10px;"></asp:Label></a>
+                </div>
+            </div>
+            <div style="display: flex;flex-direction: column;">
+                <asp:Label ID="Label27" runat="server" Text="Contact Information" class="footer-heading"></asp:Label>
+                <asp:Label ID="Label28" runat="server" Text="EMAIL: support@bookhaven.com"></asp:Label>
+                <asp:Label ID="Label29" runat="server" Text="TEL: 123-456-789"></asp:Label>
+            </div>
+        </div>                
+                                                                           
     </form>
 </body>
 </html>
