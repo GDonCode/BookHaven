@@ -78,19 +78,27 @@
             padding: 10px;
         }
         .nav-link a {
-            text-decoration: none;
-            position: relative;
-            display: inline-block;
+             text-decoration: none;
+             position: relative;
+             display: inline-block;
         }
         .nav-link {
-            padding-bottom: 2px;
-            border-bottom: 2px transparent;
-            font-size: 1.25rem;
-            transition: font-size 0.3s ease;
+             padding-bottom: 2px;
+             border-bottom: 2px transparent;
+             font-size: 1.25rem;
+             transition: font-size 0.3s ease;
+             text-decoration: none;
+             position: relative;
+             display: inline-block;
+             color: black;
         }
         .nav-link:hover {
             border-bottom: 2px solid #f5e04d;
             font-size: 1.5rem;
+        }
+        .nav-link_container {
+            display: flex;
+            gap: 50px;
         }
         .main  {
             padding: 20px 0;
@@ -101,7 +109,33 @@
 </head>
 <body>
     <form id="form1" runat="server" style="text-align: center;position: relative;">
+                                    <%--  NAV--%>
 
+<div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:space-evenly; padding: 10px 0;">
+    
+                          <%--  NAV LINKS --%>
+    <div class="nav-link_container">
+        <a href="Browse.aspx" class="nav-link">
+            <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
+            <asp:Label ID="Label19" runat="server" Text="Browse Books"></asp:Label>
+        </a>
+        <a href="User.aspx" class="nav-link">
+            <asp:Image ID="Image9" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
+            <asp:Label ID="Label20" runat="server" Text="User Account" ></asp:Label>
+        </a>
+    </div>
+    <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
+    <div class="nav-link_container">
+        <a href="Contact.aspx" class="nav-link">
+            <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
+            <asp:Label ID="Label21" runat="server" Text="Contact Us"></asp:Label>
+        </a>
+        <a href="Cart.aspx" class="nav-link">
+            <asp:Image ID="Image11" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/shopping-cart.png" />
+            <asp:Label ID="Label22" runat="server" Text="Shopping Cart"></asp:Label>
+        </a>
+    </div>
+</div>
                                           
     <div class="main">
         <asp:Label ID="Label1" runat="server" Text="CHECKOUT" style="font-size: 1.75rem;letter-spacing: 3px;margin: 0 auto;font-weight: 500;"></asp:Label>
