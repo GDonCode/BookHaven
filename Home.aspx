@@ -153,19 +153,19 @@
             <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
                                   <%--  NAV LINKS --%>
             <div style="display: flex;gap: 100px;margin-left: -16px;">
-                <a href="#" class="nav-link">
+                <a href="Browse.aspx" class="nav-link">
                     <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
                     <asp:Label ID="Label1" runat="server" Text="Browse Books"></asp:Label>
                 </a>
-                <a href="#" class="nav-link">
+                <a href="User.aspx" class="nav-link">
                     <asp:Image ID="Image9" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
                     <asp:Label ID="Label2" runat="server" Text="User Account" ></asp:Label>
                 </a>
-                <a href="#" class="nav-link">
+                <a href="Contact.aspx" class="nav-link">
                     <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
                     <asp:Label ID="Label3" runat="server" Text="Contact Us"></asp:Label>
                 </a>
-                <a href="#" class="nav-link">
+                <a href="Cart.aspx" class="nav-link">
                     <asp:Image ID="Image11" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/shopping-cart.png" />
                     <asp:Label ID="Label4" runat="server" Text="Shopping Cart"></asp:Label>
                 </a>
@@ -183,6 +183,8 @@
         </div>
         
         <div style="background-color: #f5e04d; width: 50%; margin: 0 auto;">
+
+
                                  <%-- CAROUSEL --%>  
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators" style="list-style: none;">
