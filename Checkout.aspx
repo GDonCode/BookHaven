@@ -12,9 +12,15 @@
     
     
     <style>
-        body {
+        html, body {
+            padding: 0; 
+            margin: 0; 
+            width: 100%;
+            height: 100%;
             font-family: "Open Sans", sans-serif;
             background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
         }
         .section {
             background-color: white;
@@ -57,15 +63,52 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            left: 0px;
+            margin-bottom: 0px;
+            background-color: #4d62f5;
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .nav-link a {
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+        }
+        .nav-link {
+            padding-bottom: 2px;
+            border-bottom: 2px transparent;
+            font-size: 1.25rem;
+            transition: font-size 0.3s ease;
+        }
+        .nav-link:hover {
+            border-bottom: 2px solid #f5e04d;
+            font-size: 1.5rem;
+        }
+        .main  {
+            padding: 20px 0;
+            flex-grow: 1;
+        }
+
     </style>
 </head>
 <body>
-    <form id="form1" runat="server" style="text-align: center;">
+    <form id="form1" runat="server" style="text-align: center;position: relative;">
+
+                                          
+    <div class="main">
         <asp:Label ID="Label1" runat="server" Text="CHECKOUT" style="font-size: 1.75rem;letter-spacing: 3px;margin: 0 auto;font-weight: 500;"></asp:Label>
         <div style="display: flex;gap: 30px;justify-content: center;text-align: left;">
 
             <div class="section">
-                    <asp:Label ID="Label2" runat="server" Text="SHIP TO" style="font-weight: 500;"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="SHIP TO" style="font-weight: 700;"></asp:Label>
 
                     <div class="shipping-input_container">
                         <asp:Label ID="Label3" runat="server" Text="Label" class="shipping-input_label" style="margin-top: 20px;">FULL NAME</asp:Label>
@@ -115,9 +158,9 @@
 
 
             <div class="section order-summary_section">
-                <asp:Label ID="Label8" runat="server" Text="ORDER SUMMARY" style="font-weight: 500;"></asp:Label>
+                <asp:Label ID="Label8" runat="server" Text="ORDER SUMMARY" style="font-weight: 700;"></asp:Label>
                 
-                <div style="display: flex;flex-direction: column;">
+                <div style="display: flex;flex-direction: column;gap: 5px;">
                     <div class="order-summary_item">
                         <asp:Label ID="Label9" runat="server" Text="Subtotal"></asp:Label>
                         <asp:Label ID="Label10" runat="server" Text="$0.00"></asp:Label>
@@ -146,6 +189,8 @@
              </div>
 
          </div>
+    </div>
+                                              
     </form>
 </body>
 </html>

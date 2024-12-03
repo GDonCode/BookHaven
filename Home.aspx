@@ -79,13 +79,23 @@
         .browse_all-button:hover {
             font-size: 1.75rem;
         }
-        .auto-style1 {
+
+        .footer {
             position: absolute;
             bottom: 0;
             width: 100%;
             height: 100px;
             left: 0px;
             margin-bottom: 0px;
+            background-color: #4DF5E0;
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+            padding: 10px;
+        }
+        .nav-link_container {
+            display: flex;
+            gap: 50px;
         }
         .nav-link a {
             text-decoration: none;
@@ -102,6 +112,7 @@
             border-bottom: 2px solid #f5e04d;
             font-size: 1.5rem;
         }
+
         .category {
             display: flex;
             flex-direction: column;
@@ -125,7 +136,7 @@
             width: 300px;
             text-align: center;
             gap: 5px;
-            transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in;
         }
         .category-item:hover {
             transform: translateY(-15px);
@@ -150,10 +161,10 @@
          
                                     <%--  NAV--%>
 
-        <div style="background-color: #4d62f5; display: flex;flex-direction: column; align-items: center; justify-content: space-between;padding-top: 10px;">
-            <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
+        <div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:space-evenly; padding: 10px 0;">
+            
                                   <%--  NAV LINKS --%>
-            <div style="display: flex;gap: 100px;margin-left: -16px;">
+            <div class="nav-link_container">
                 <a href="Browse.aspx" class="nav-link">
                     <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
                     <asp:Label ID="Label1" runat="server" Text="Browse Books"></asp:Label>
@@ -162,6 +173,9 @@
                     <asp:Image ID="Image9" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
                     <asp:Label ID="Label2" runat="server" Text="User Account" ></asp:Label>
                 </a>
+            </div>
+            <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
+            <div class="nav-link_container">
                 <a href="Contact.aspx" class="nav-link">
                     <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
                     <asp:Label ID="Label3" runat="server" Text="Contact Us"></asp:Label>
@@ -286,7 +300,7 @@
 
                                            <%--FOOTER--%>
 
-    <div style="background-color: #43b14b;display: flex;margin-top: 20px;justify-content: space-around;padding: 10px;" class="auto-style1">
+    <div class="footer">
         <div style="display: flex;flex-direction: column;gap: 10px;">
             <asp:Label ID="Label20" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
             <div style="display: flex;gap: 10px;">
