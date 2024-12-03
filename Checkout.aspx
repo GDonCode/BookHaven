@@ -29,8 +29,8 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: 40%;
             margin-top: 20px;
+            width: 100%;
         }
 
         .shipping-input_container{
@@ -49,6 +49,10 @@
         }
         .order-summary_section {
             height: min-content;
+            width: 30%;
+            position: fixed;
+            top: 198px;
+            right: 100px;
         }
         .order-summary_item {
             display: flex;
@@ -138,9 +142,14 @@
                                           
     <div class="main">
         <asp:Label ID="Label1" runat="server" Text="CHECKOUT" style="font-size: 1.75rem;letter-spacing: 3px;margin: 0 auto;font-weight: 500;"></asp:Label>
-        <div style="display: flex;gap: 30px;justify-content: center;text-align: left;">
+        <div style="display: flex;justify-content: left;">
+            <div style="display: flex;flex-direction: column;gap: 30px;justify-content: center;text-align: left;padding-left: 100px;">
 
-            <div class="section">
+                <div class="section">
+                    <asp:Label ID="Label30" runat="server" Text="ITEMS" style="font-weight: 700;"></asp:Label>
+                </div>
+
+                <div class="section">
                     <asp:Label ID="Label2" runat="server" Text="SHIP TO" style="font-weight: 700;"></asp:Label>
 
                     <div class="shipping-input_container">
@@ -189,45 +198,62 @@
                     </div>
                </div>
 
+               <div class="section">
+                   <asp:Label ID="Label31" runat="server" Text="PAYMENT" style="font-weight: 700;"></asp:Label>
+                   <div class="shipping-input_container">
+                       <asp:Label ID="Label23" runat="server" Text="CREDIT CARD NUMBER" class="shipping-input_label"></asp:Label>
+                       <asp:TextBox ID="TextBox6" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                   </div>
+                   <div style="display: flex;gap: 10px;">     
+                       <div class="shipping-input_container">
+                           <asp:Label ID="monthlabel" runat="server" Text="EXP. MONTH" class="shipping-input_label"></asp:Label>
+                           <asp:TextBox ID="TextBox7" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                       </div>
+                       <div class="shipping-input_container">
+                           <asp:Label ID="yearlabel" runat="server" Text="EXP. YEAR" class="shipping-input_label"></asp:Label>
+                           <asp:TextBox ID="TextBox8" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                       </div>
+                   </div>
+               </div>
+            </div>
 
-            <div class="section order-summary_section">
-                <asp:Label ID="Label8" runat="server" Text="ORDER SUMMARY" style="font-weight: 700;"></asp:Label>
-                
-                <div style="display: flex;flex-direction: column;gap: 5px;">
-                    <div class="order-summary_item">
-                        <asp:Label ID="Label9" runat="server" Text="Subtotal"></asp:Label>
-                        <asp:Label ID="Label10" runat="server" Text="$0.00"></asp:Label>
-                    </div>
 
-                    <div class="order-summary_item">
-                        <asp:Label ID="Label11" runat="server" Text="Savings"></asp:Label>
-                        <asp:Label ID="Label12" runat="server" Text="$0.00"></asp:Label>
-                    </div>
+                <div class="section order-summary_section">
+                    <asp:Label ID="Label8" runat="server" Text="ORDER SUMMARY" style="font-weight: 700;"></asp:Label>
+                    <div style="display: flex;flex-direction: column;gap: 5px;">
+                        <div class="order-summary_item">
+                            <asp:Label ID="Label9" runat="server" Text="Subtotal"></asp:Label>
+                            <asp:Label ID="Label10" runat="server" Text="$0.00"></asp:Label>
+                        </div>
 
-                    <div class="order-summary_item">
-                        <asp:Label ID="Label13" runat="server" Text="Shipping"></asp:Label>
-                        <asp:Label ID="Label14" runat="server" Text="$0.00"></asp:Label>
-                    </div>
+                        <div class="order-summary_item">
+                            <asp:Label ID="Label11" runat="server" Text="Savings"></asp:Label>
+                            <asp:Label ID="Label12" runat="server" Text="$0.00"></asp:Label>
+                        </div>
 
-                    <div class="order-summary_item">
-                        <asp:Label ID="Label15" runat="server" Text="Est. Tax"></asp:Label>
-                        <asp:Label ID="Label16" runat="server" Text="$0.00"></asp:Label>
-                    </div>
+                        <div class="order-summary_item">
+                            <asp:Label ID="Label13" runat="server" Text="Shipping"></asp:Label>
+                            <asp:Label ID="Label14" runat="server" Text="$0.00"></asp:Label>
+                        </div>
 
-                    <div class="total-container">
-                        <asp:Label ID="Label17" runat="server" Text="TOTAL"></asp:Label>
-                        <asp:Label ID="Label18" runat="server" Text="$0.00"></asp:Label>
+                        <div class="order-summary_item">
+                            <asp:Label ID="Label15" runat="server" Text="Est. Tax"></asp:Label>
+                            <asp:Label ID="Label16" runat="server" Text="$0.00"></asp:Label>
+                        </div>
+
+                        <div class="total-container">
+                            <asp:Label ID="Label17" runat="server" Text="TOTAL"></asp:Label>
+                            <asp:Label ID="Label18" runat="server" Text="$0.00"></asp:Label>
+                        </div>
                     </div>
                 </div>
-             </div>
-
-         </div>
     </div>
+  </div>
                                                                   
 
         <div class="footer">
             <div style="display: flex;flex-direction: column;gap: 10px;">
-                <asp:Label ID="Label23" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
+                <asp:Label ID="follow" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
                 <div style="display: flex;gap: 10px;">
                     <a href="https://www.instagram.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image5" runat="server" Height="30px" ImageUrl="~/Content/images/instagram.png" Width="30px" /><asp:Label ID="Label24" runat="server" Text="Instagram" style="margin-right: 10px;"></asp:Label></a>
                     <a href="https://www.x.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image6" runat="server" Height="30px" ImageUrl="~/Content/images/x.png" Width="30px" /><asp:Label ID="Label25" runat="server" Text="X (Twitter)" style="margin-right: 10px;"></asp:Label></a>
