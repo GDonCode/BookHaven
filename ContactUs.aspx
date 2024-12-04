@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="BookHaven.Contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContactUs.aspx.cs" Inherits="BookHaven.Contact" %>
 
 <!DOCTYPE html>
 
@@ -144,7 +144,7 @@
     </div>
     <a href="Home.aspx" style="text-decoration: none;color: black;"><asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px" style="margin: 0 20px;"/></a>
     <div class="nav-link_container">
-        <a href="Contact.aspx" class="nav-link">
+        <a href="ContactUs.aspx" class="nav-link">
             <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
             <asp:Label ID="Label21" runat="server" Text="Contact Us"></asp:Label>
         </a>
