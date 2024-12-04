@@ -11,7 +11,19 @@ namespace BookHaven
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+ 
+        }
 
+        protected void BillingToggle(object sender, EventArgs e)
+        {
+            if (billing_checkbox.Checked)
+            {
+                billing_section.Visible = false;
+            }
+            else
+            {
+                billing_section.Visible = true;
+            }
         }
     }
 }

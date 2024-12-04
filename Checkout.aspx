@@ -38,6 +38,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            position: relative;
         }
         .shipping-input_label {
             font-size: 0.75rem;
@@ -50,10 +51,11 @@
         }
         .order-summary_section {
             height: min-content;
-            width: 30%;
+            width: 31%;
             position: fixed;
             top: 198px;
-            right: 100px;
+            right: 90px;
+            margin-bottom: 60px;
         }
         .order-summary_item {
             display: flex;
@@ -118,12 +120,18 @@
             background-color: #f5e04d;
             border: 2px solid black;
             font-size: 1.5rem;
-            transition: font-size 0.3s ease;
+            transition: font-size 0.3s ease, width 0.3s ease;
             margin: 0 auto;
-            padding: 5px 10px;
+            padding: 5px 0;
+            width: 200px;
         }
         .continueBtn:hover {
             font-size: 1.75rem;
+            width: 220px;
+        }
+        .validation {
+            display: flex;
+            color: red;
         }
     </style>
 </head>
@@ -156,40 +164,55 @@
     </div>
 </div>
                                           
-    <div class="main">
+<div class="main">
         <div style="display: flex;justify-content: left;">
-            <div style="display: flex;flex-direction: column;gap: 30px;justify-content: center;text-align: left;padding-left: 100px;">
+            <div style="display: flex;flex-direction: column;gap: 30px;justify-content: center;text-align: left;padding-left: 90px;width: 45%;">
                 <asp:Label ID="Label1" runat="server" Text="CHECKOUT" style="font-size: 1.75rem;letter-spacing: 1.5px;margin: 0 auto;"></asp:Label>
+                
+                                                                     <%-- ITEMS--%>
                 <div class="section" style="margin-top: -15px;">
                     <asp:Label ID="Label30" runat="server" Text="ITEMS" style="font-weight: 700;"></asp:Label>
                 </div>
 
+                                                        <%--SHIP TO SECTION--%>
                 <div class="section">
                     <asp:Label ID="Label2" runat="server" Text="SHIP TO" style="font-weight: 700;"></asp:Label>
 
                     <div class="shipping-input_container">
                         <asp:Label ID="Label3" runat="server" Text="Label" class="shipping-input_label" style="margin-top: 20px;">FULL NAME</asp:Label>
-                        <asp:TextBox ID="FullName_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="FullNameValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="FullName_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="FullNameValidator2" runat="server" ErrorMessage="Invalid name entered." ControlToValidate="FullName_textbox" ValidationExpression="^[a-zA-Z-]{2,}\s+[a-zA-Z-]{2,}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="FullName_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                <asp:RegularExpressionValidator ID="FullNameValidator1" runat="server" ErrorMessage="Invalid name entered." ControlToValidate="FullName_textbox" ValidationExpression="^[a-zA-Z-]{2,}\s+[a-zA-Z-]{2,}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="FullNameValidator2" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="FullName_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="shipping-input_container">
                         <asp:Label ID="Label4" runat="server" Text="Label" class="shipping-input_label">STREET ADDRESS</asp:Label>
-                        <asp:TextBox ID="StreetAddress_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="StreetAddressValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="StreetAddress_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="StreetAddressValidator2" runat="server" ErrorMessage="Invalid street address entered." ControlToValidate="StreetAddress_textbox" ValidationExpression="^\d+\s+[a-zA-Z0-9\s,.-]+(\s*(Apt|Suite|Unit)?\s*\d+)?$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="StreetAddress_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                             <div class="validation">
+                                <asp:RegularExpressionValidator ID="StreetAddressValidator2" runat="server" ErrorMessage="Invalid street address entered." ControlToValidate="StreetAddress_textbox" ValidationExpression="^\d+\s+[a-zA-Z0-9\s,.-]+(\s*(Apt|Suite|Unit)?\s*\d+)?$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="StreetAddressValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="StreetAddress_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                             </div>
+                        </div>
                     </div>
 
                     <div class="shipping-input_container">
                         <asp:Label ID="Label5" runat="server" Text="Label" class="shipping-input_label">TOWN/CITY</asp:Label>
-                        <asp:TextBox ID="Town_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="TownValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="Town_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="TownValidator2" runat="server" ErrorMessage="Invalid Town/City entered." ControlToValidate="Town_textbox" ValidationExpression="^[a-zA-Z\s.-]+$" class="shipping-input_label"></asp:RegularExpressionValidator>
-                    </div>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="Town_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                <asp:RegularExpressionValidator ID="TownValidator2" runat="server" ErrorMessage="Invalid Town/City entered." ControlToValidate="Town_textbox" ValidationExpression="^[a-zA-Z\s.-]+$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="TownValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="Town_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                   </div>
 
-                    <div style="display: flex;gap: 40px;">
-                         <asp:DropDownList ID="DropDownList1" runat="server" style="width: 250px;height: 3rem;" class="shipping-input_label">
+                    <div style="display: flex;justify-content: space-around;">
+                         <asp:DropDownList ID="Parish_dropdown" runat="server" style="width: 250px;height: 3rem;" class="shipping-input_label">
                              <asp:ListItem Value="">PARISH</asp:ListItem>
                              <asp:ListItem Value="Westmoreland">Westmoreland</asp:ListItem>
                              <asp:ListItem Value="Hanover">Hanover</asp:ListItem>
@@ -206,56 +229,184 @@
                              <asp:ListItem Value="Manchester">Manchester</asp:ListItem>
                              <asp:ListItem Value="St. Elizabeth">St. Elizabeth</asp:ListItem>
                          </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="ParishValidator1" runat="server" ErrorMessage="Choose a Parish." ControlToValidate="Parish_dropdown" class="shipping-input_label"></asp:RequiredFieldValidator>
 
                          <div class="shipping-input_container">
                              <asp:Label ID="Label6" runat="server" Text="ZIP CODE" class="shipping-input_label"></asp:Label>
-                             <asp:TextBox ID="ZipCode_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                             <asp:RequiredFieldValidator ID="ZipCodeValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ZipCode_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                             <asp:RegularExpressionValidator ID="ZipCodeValidator2" runat="server" ErrorMessage="Invalid Zip Code entered." ControlToValidate="ZipCode_textbox" ValidationExpression="^\d{5}(-\d{4})?$" class="shipping-input_label"></asp:RegularExpressionValidator>
-                         </div>
+                             <div style="display: flex;flex-direction: column;">
+                                <asp:TextBox ID="ZipCode_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                                <div class="validation">
+                                     <asp:RegularExpressionValidator ID="ZipCodeValidator2" runat="server" ErrorMessage="Invalid Zip Code entered." ControlToValidate="ZipCode_textbox" ValidationExpression="^\d{5}(-\d{4})?$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                     <asp:RequiredFieldValidator ID="ZipCodeValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ZipCode_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="shipping-input_container">
                         <asp:Label ID="Label7" runat="server" Text="PHONE NUMBER" class="shipping-input_label"></asp:Label>
-                        <asp:TextBox ID="PhoneNumber_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="PhoneNumberValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="PhoneNumber_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="PhoneNumberValidator2" runat="server" ErrorMessage="Invalid phone number entered." ControlToValidate="PhoneNumber_textbox" ValidationExpression="^(\+1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="PhoneNumber_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                <asp:RegularExpressionValidator ID="PhoneNumberValidator2" runat="server" ErrorMessage="Invalid phone number entered." ControlToValidate="PhoneNumber_textbox" ValidationExpression="^(\+1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="PhoneNumberValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="PhoneNumber_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
                     </div>
-               </div>
-
+                </div>
+                                                         <%-- PAYMENT SECTION--%>
                <div class="section" style="margin-bottom: 20px;padding-bottom: 20px;">
                    <asp:Label ID="Label31" runat="server" Text="PAYMENT" style="font-weight: 700;"></asp:Label>
+                   
                    <div class="shipping-input_container">
                        <asp:Label ID="Label23" runat="server" Text="CREDIT CARD NUMBER" class="shipping-input_label"></asp:Label>
-                       <asp:TextBox ID="CreditCardNumber_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                       <asp:RequiredFieldValidator ID="CreditCardNumberValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="CreditCardNumber_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                       <asp:RegularExpressionValidator ID="CreditCardNumberValidator2" runat="server" ErrorMessage="Invalid Credit Card number entered." ControlToValidate="CreditCardNumber_textbox" ValidationExpression="^(\d{4}[\s\-]?){3}\d{4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                       <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="CreditCardNumber_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                               <asp:RegularExpressionValidator ID="CreditCardNumberValidator2" runat="server" ErrorMessage="Invalid Credit Card number entered." ControlToValidate="CreditCardNumber_textbox" ValidationExpression="^(\d{4}[\s\-]?){3}\d{4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                               <asp:RequiredFieldValidator ID="CreditCardNumberValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="CreditCardNumber_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
                    </div>
+                
+                                                       
                    <div style="display: flex;gap: 10px;">     
-                       <div class="shipping-input_container">
-                           <asp:Label ID="monthlabel" runat="server" Text="EXP. MONTH" class="shipping-input_label"></asp:Label>
-                           <asp:TextBox ID="ExpMonth_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                           <asp:RequiredFieldValidator ID="ExpMonthValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ExpMonth_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                           <asp:RegularExpressionValidator ID="ExpMonthValidator2" runat="server" ErrorMessage="Invalid Expiry Month entered." ControlToValidate="ExpMonth_textbox" ValidationExpression="^(0[1-9]|1[0-2])$" class="shipping-input_label"></asp:RegularExpressionValidator>
-                       </div>
-                       <div class="shipping-input_container">
-                           <asp:Label ID="yearlabel" runat="server" Text="EXP. YEAR" class="shipping-input_label"></asp:Label>
-                           <asp:TextBox ID="ExpYear_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
-                           <asp:RegularExpressionValidator ID="ExpYearValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ExpYear_textbox" class="shipping-input_label"></asp:RegularExpressionValidator>
-                           <asp:RequiredFieldValidator ID="ExpYearValidator2" runat="server" ErrorMessage="Invalid Expiry Year entered." ControlToValidate="ExpYear_textbox" ValidationExpression="^(20[2-9][5-9]|2[1-9]\d{2})$" class="shipping-input_label"></asp:RequiredFieldValidator>
-                       </div>
-                       <div class="shipping-input_container">
-                           <asp:Label ID="Label32" runat="server" Text="CVV" class="shipping-input_label"></asp:Label>
-                           <asp:TextBox ID="CVV_textbox" runat="server" class="shipping-input_label"></asp:TextBox>
-                           <asp:RequiredFieldValidator ID="CVValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="CVV_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
-                           <asp:RegularExpressionValidator ID="CVValidator2" runat="server" ErrorMessage="Invalid CVV entered." ControlToValidate="CVV_textbox" ValidationExpression="^\d{3,4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
-                       </div>
+                           <div class="shipping-input_container">
+                               <asp:Label ID="monthlabel" runat="server" Text="EXP. MONTH" class="shipping-input_label"></asp:Label>
+                               <div style="display: flex;flex-direction: column;">
+                                    <asp:TextBox ID="ExpMonth_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                                    <div class="validation">
+                                       <asp:RegularExpressionValidator ID="ExpMonthValidator2" runat="server" ErrorMessage="Invalid Expiry Month entered." ControlToValidate="ExpMonth_textbox" ValidationExpression="^(0[1-9]|1[0-2])$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                       <asp:RequiredFieldValidator ID="ExpMonthValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ExpMonth_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="shipping-input_container">
+                               <asp:Label ID="yearlabel" runat="server" Text="EXP. YEAR" class="shipping-input_label"></asp:Label>
+                               <div style="display: flex;flex-direction: column;">
+                                    <asp:TextBox ID="ExpYear_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                                    <div class="validation">
+                                       <asp:RegularExpressionValidator ID="ExpYearValidator1" runat="server" ErrorMessage="Invalid Expiry Year entered." ControlToValidate="ExpYear_textbox"  ValidationExpression="^(20[2-9][5-9]|2[1-9]\d{2})$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                       <asp:RequiredFieldValidator ID="ExpYearValidator2" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="ExpYear_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                                    </div>
+                               </div>
+                          </div>
+                    
+                           <div class="shipping-input_container">
+                               <asp:Label ID="Label32" runat="server" Text="CVV" class="shipping-input_label"></asp:Label>
+                               <div style="display: flex;flex-direction: column;">
+                                    <asp:TextBox ID="CVV_textbox" runat="server" class="shipping-input_label"></asp:TextBox>
+                                    <div class="validation">
+                                       <asp:RegularExpressionValidator ID="CVValidator2" runat="server" ErrorMessage="Invalid CVV entered." ControlToValidate="CVV_textbox" ValidationExpression="^\d{3,4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                       <asp:RequiredFieldValidator ID="CVValidator1" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="CVV_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                                    </div>
+                               </div>
+                          </div>
+                    </div>
+
+
+                                                              <%--  BILLING SECTION START--%>
+             
+
+
+                    <div style="display:flex;gap:10px;">
+                        <asp:CheckBox ID="billing_checkbox" runat="server" OnCheckedChanged="BillingToggle" AutoPostBack="true"/>
+                        <asp:Label ID="billing_checkbox_label" runat="server" Text="Use shipping address for billing address"></asp:Label>
+                    </div>
+            <div id="billing_section" runat="server">
+                   <div class="shipping-input_container">
+                        <asp:Label ID="billing_FullName" runat="server" Text="FULL NAME" class="shipping-input_label" style="margin-top: 20px;"></asp:Label>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="billing_FullName_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                <asp:RegularExpressionValidator ID="FullNameValidator3" runat="server" ErrorMessage="Invalid name entered." ControlToValidate="billing_FullName_textbox" ValidationExpression="^[a-zA-Z-]{2,}\s+[a-zA-Z-]{2,}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="FullNameValidator4" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="billing_FullName_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="shipping-input_container">
+                        <asp:Label ID="billing_StreetAddress" runat="server" Text="STREET ADDRESS" class="shipping-input_label" style="margin-top: 20px;"></asp:Label>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="billing_StreetAddress_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                 <asp:RegularExpressionValidator ID="StreetAddressValidator3" runat="server" ErrorMessage="Invalid street address entered." ControlToValidate="billing_StreetAddress_textbox" ValidationExpression="^\d+\s+[a-zA-Z0-9\s,.-]+(\s*(Apt|Suite|Unit)?\s*\d+)?$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                 <asp:RequiredFieldValidator ID="StreetAddressValidator4" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="billing_StreetAddress_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
                    </div>
-               </div>
-                <asp:Button ID="continueBtn" runat="server" Text="CONTINUE" class="continueBtn"/>
-            </div>
+
+                    <div class="shipping-input_container">
+                        <asp:Label ID="billing_Town" runat="server" Text="TOWN/CITY" class="shipping-input_label"></asp:Label>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="billing_Town_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                 <asp:RegularExpressionValidator ID="TownValidator3" runat="server" ErrorMessage="Invalid Town/City entered." ControlToValidate="billing_Town_textbox" ValidationExpression="^[a-zA-Z\s.-]+$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                 <asp:RequiredFieldValidator ID="TownValidator4" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="billing_Town_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;justify-content: space-around;">
+                          <asp:DropDownList ID="billing_Parish_dropdown" runat="server" style="width: 250px;height: 3rem;" class="shipping-input_label">
+                              <asp:ListItem Value="">PARISH</asp:ListItem>
+                              <asp:ListItem Value="Westmoreland">Westmoreland</asp:ListItem>
+                              <asp:ListItem Value="Hanover">Hanover</asp:ListItem>
+                              <asp:ListItem Value="St. James">St. James</asp:ListItem>
+                              <asp:ListItem Value="Trelawny">Trelawny</asp:ListItem>
+                              <asp:ListItem Value="St. Ann">St. Ann</asp:ListItem>
+                              <asp:ListItem Value="St. Mary">St. Mary</asp:ListItem>
+                              <asp:ListItem Value="Portland">Portland</asp:ListItem>
+                              <asp:ListItem Value="St. Thomas">St. Thomas</asp:ListItem>
+                              <asp:ListItem Value="St. Andrew">St. Andrew</asp:ListItem>
+                              <asp:ListItem Value="Kingston">Kingston</asp:ListItem>
+                              <asp:ListItem Value="St. Catherine">St. Catherine</asp:ListItem>
+                              <asp:ListItem Value="Clarendon">Clarendon</asp:ListItem>
+                              <asp:ListItem Value="Manchester">Manchester</asp:ListItem>
+                              <asp:ListItem Value="St. Elizabeth">St. Elizabeth</asp:ListItem>
+                          </asp:DropDownList>
+                         <asp:RequiredFieldValidator ID="ParishValidator2" runat="server" ErrorMessage="Choose a Parish." ControlToValidate="billing_Parish_dropdown" class="shipping-input_label"></asp:RequiredFieldValidator>
+
+                         <div class="shipping-input_container">
+                            <asp:Label ID="billing_ZipCode" runat="server" Text="ZIP CODE" class="shipping-input_label"></asp:Label>
+                            <div style="display: flex;flex-direction: column;">
+                                <asp:TextBox ID="billing_ZipCode_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                                <div class="validation">
+                                     <asp:RegularExpressionValidator ID="ZipCodeValidator3" runat="server" ErrorMessage="Invalid Zip Code entered." ControlToValidate="billing_ZipCode_textbox" ValidationExpression="^\d{5}(-\d{4})?$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                     <asp:RequiredFieldValidator ID="ZipCodeValidator4" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="billing_ZipCode_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="shipping-input_container">
+                        <asp:Label ID="billing_PhoneNumber" runat="server" Text="PHONE NUMBER" class="shipping-input_label"></asp:Label>
+                        <div style="display: flex;flex-direction: column;">
+                            <asp:TextBox ID="billing_PhoneNumber_textbox" runat="server" class="shipping-input_textbox"></asp:TextBox>
+                            <div class="validation">
+                                <asp:RegularExpressionValidator ID="PhoneNumberValidator3" runat="server" ErrorMessage="Invalid phone number entered." ControlToValidate="billing_PhoneNumber_textbox" ValidationExpression="^(\+1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$" class="shipping-input_label"></asp:RegularExpressionValidator>
+                                <asp:RequiredFieldValidator ID="PhoneNumberValidator4" runat="server" ErrorMessage="Field cannot be blank." ControlToValidate="billing_PhoneNumber_textbox" class="shipping-input_label"></asp:RequiredFieldValidator>
+                            </div>
+                        </div>
+                  </div>
+
+        </div>
+                                                                    <%--BILLING SECTION END--%>
+
+            </div>                               
+                                            <div style="display: flex;flex-direction: column;gap: 20px;">
+                                                <asp:Button ID="continueBtn" runat="server" Text="Continue" class="continueBtn"/>
+                                                <asp:Button ID="keep_shoppingBtn" runat="server" Text="Keep Shopping" class="continueBtn"/>
+                                            </div>
+        </div>
+</div>
 
 
+                
+
+           
+
+                                                            <%--ORDER SUMMARY--%>
                 <div class="section order-summary_section">
                     <asp:Label ID="Label8" runat="server" Text="ORDER SUMMARY" style="font-weight: 700;margin: 0 auto;margin-bottom: 10px;"></asp:Label>
                     <div style="display: flex;flex-direction: column;gap: 5px;">
@@ -288,7 +439,7 @@
     </div>
   </div>
                                                                   
-
+                                                                <%--FOOTER--%>
         <div class="footer">
             <div style="display: flex;flex-direction: column;gap: 10px;">
                 <asp:Label ID="follow" runat="server" Text="Follow our Social Media:" class="footer-heading"></asp:Label>
