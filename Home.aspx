@@ -94,6 +94,16 @@
             font-size: 1.75rem;
         }
 
+                            /*NAV AND FOOTER STYLES START*/
+
+        .nav {
+            background-color: #4DF5E0;
+            display: flex;
+            align-items:center;
+            justify-content:center; 
+            padding: 10px 0;
+            border-bottom: 2px solid #f5e04d;
+        }
         .footer {
             position: absolute;
             bottom: 0;
@@ -106,6 +116,7 @@
             margin-top: 20px;
             justify-content: space-around;
             padding: 10px;
+            border-top: 2px solid #f5e04d;
         }
         .nav-link_container {
             display: flex;
@@ -126,6 +137,12 @@
             border-bottom: 2px solid #f5e04d;
             font-size: 1.5rem;
         }
+        .footer-heading {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+                            /*NAV AND FOOTER STYLES END*/
 
         .category {
             display: flex;
@@ -164,17 +181,14 @@
             text-decoration: underline;
             font-size: 20px;
         }
-        .footer-heading {
-            font-size: 1.25rem;
-            font-weight: 500;
-        }
+        
     </style>
 </head>
 <body>
     <form id="form1" runat="server" style="position: relative;min-height: 100vh;padding-bottom: 120px;box-sizing: border-box;">
          
                                     <%--  NAV--%>
-        <div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:center; padding: 10px 0;">
+        <div class="nav">
                                   <%--  NAV LINKS --%>
             <div class="nav-link_container">
                 <a href="Browse.aspx" class="nav-link">

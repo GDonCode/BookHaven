@@ -87,6 +87,13 @@
             font-weight: 500;
         }
         }
+        .nav {
+            background-color: #4DF5E0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+        }
         .nav-link a {
              text-decoration: none;
              position: relative;
@@ -139,7 +146,7 @@
     <form id="form1" runat="server" style="position: relative;">
                                    
                                     <%--  NAV--%>
-<div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content: center;padding: 10px 0;">
+<div class="nav">
                                  <%--  NAV LINKS --%>
     <div class="nav-link_container">
         <a href="Browse.aspx" class="nav-link">
