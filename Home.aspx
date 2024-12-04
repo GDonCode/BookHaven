@@ -160,9 +160,7 @@
     <form id="form1" runat="server" style="position: relative;min-height: 100vh;padding-bottom: 120px;box-sizing: border-box;">
          
                                     <%--  NAV--%>
-
-        <div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:space-evenly; padding: 10px 0;">
-            
+        <div style="background-color: #4DF5E0; display: flex;align-items: center;justify-content:center; padding: 10px 0;">
                                   <%--  NAV LINKS --%>
             <div class="nav-link_container">
                 <a href="Browse.aspx" class="nav-link">
@@ -174,7 +172,7 @@
                     <asp:Label ID="Label2" runat="server" Text="User Account" ></asp:Label>
                 </a>
             </div>
-            <asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px"/>
+            <a href="Home.aspx" style="text-decoration: none;color: black;"><asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px" style="margin: 0 20px;"/></a>
             <div class="nav-link_container">
                 <a href="Contact.aspx" class="nav-link">
                     <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />

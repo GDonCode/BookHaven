@@ -141,13 +141,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// TextBox1 control.
+        /// FullName_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox FullName_textbox;
+
+        /// <summary>
+        /// FullNameValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FullNameValidator1;
+
+        /// <summary>
+        /// FullNameValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator FullNameValidator2;
 
         /// <summary>
         /// Label4 control.
@@ -159,13 +177,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// TextBox2 control.
+        /// StreetAddress_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox StreetAddress_textbox;
+
+        /// <summary>
+        /// StreetAddressValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator StreetAddressValidator1;
+
+        /// <summary>
+        /// StreetAddressValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator StreetAddressValidator2;
 
         /// <summary>
         /// Label5 control.
@@ -177,13 +213,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// TextBox3 control.
+        /// Town_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox Town_textbox;
+
+        /// <summary>
+        /// TownValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TownValidator1;
+
+        /// <summary>
+        /// TownValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TownValidator2;
 
         /// <summary>
         /// DropDownList1 control.
@@ -204,13 +258,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// TextBox4 control.
+        /// ZipCode_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox ZipCode_textbox;
+
+        /// <summary>
+        /// ZipCodeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ZipCodeValidator1;
+
+        /// <summary>
+        /// ZipCodeValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ZipCodeValidator2;
 
         /// <summary>
         /// Label7 control.
@@ -222,13 +294,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// TextBox5 control.
+        /// PhoneNumber_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox PhoneNumber_textbox;
+
+        /// <summary>
+        /// PhoneNumberValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneNumberValidator1;
+
+        /// <summary>
+        /// PhoneNumberValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PhoneNumberValidator2;
 
         /// <summary>
         /// Label31 control.
@@ -249,13 +339,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label23;
 
         /// <summary>
-        /// TextBox6 control.
+        /// CreditCardNumber_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox CreditCardNumber_textbox;
+
+        /// <summary>
+        /// CreditCardNumberValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CreditCardNumberValidator1;
+
+        /// <summary>
+        /// CreditCardNumberValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CreditCardNumberValidator2;
 
         /// <summary>
         /// monthlabel control.
@@ -267,13 +375,31 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label monthlabel;
 
         /// <summary>
-        /// TextBox7 control.
+        /// ExpMonth_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox ExpMonth_textbox;
+
+        /// <summary>
+        /// ExpMonthValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ExpMonthValidator1;
+
+        /// <summary>
+        /// ExpMonthValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ExpMonthValidator2;
 
         /// <summary>
         /// yearlabel control.
@@ -285,13 +411,76 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label yearlabel;
 
         /// <summary>
-        /// TextBox8 control.
+        /// ExpYear_textbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox ExpYear_textbox;
+
+        /// <summary>
+        /// ExpYearValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ExpYearValidator1;
+
+        /// <summary>
+        /// ExpYearValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ExpYearValidator2;
+
+        /// <summary>
+        /// Label32 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label32;
+
+        /// <summary>
+        /// CVV_textbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CVV_textbox;
+
+        /// <summary>
+        /// CVValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CVValidator1;
+
+        /// <summary>
+        /// CVValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CVValidator2;
+
+        /// <summary>
+        /// continueBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button continueBtn;
 
         /// <summary>
         /// Label8 control.
