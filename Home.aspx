@@ -50,6 +50,20 @@
             font-size: 1rem;
             transition: font-size 0.3s ease;
         }
+        .logoutBtn {
+            cursor: pointer;
+            background-color: rgba(77, 98, 245);
+            border: 2px solid black;
+            font-size: 1.5rem;
+            transition: font-size 0.3s ease;
+            padding: 0 25px;
+            width: min-content;
+            margin: 50px auto 20px auto;
+            display: block;
+        }
+        .logoutBtn:hover {
+            font-size: 1.75rem;
+        }
         .add_to_cart:hover {
             font-size: 1.25rem;
         }
@@ -295,6 +309,7 @@
         </div>
 
             <asp:Button ID="Button10" runat="server" Text="Browse All" class="browse_all-button" />
+               <asp:Button ID="logoutBtn" runat="server" Text="Log Out" class="logoutBtn"/>
 
                                            <%--FOOTER--%>
 
@@ -307,6 +322,7 @@
                 <a href="https://www.tiktok.com/" style="text-decoration: none;color: black;display: flex;gap: 5px;"><asp:Image ID="Image7" runat="server" Height="30px" ImageUrl="~/Content/images/tiktok.png" Width="30px" /><asp:Label ID="Label19" runat="server" Text="TikTok" style="margin-right: 10px;"></asp:Label></a>
             </div>
         </div>
+        
         <div style="display: flex;flex-direction: column;">
             <asp:Label ID="Label14" runat="server" Text="Contact Information" class="footer-heading"></asp:Label>
             <asp:Label ID="Label13" runat="server" Text="EMAIL: support@bookhaven.com"></asp:Label>

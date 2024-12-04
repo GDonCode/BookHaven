@@ -474,6 +474,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button10;
 
         /// <summary>
+        /// logoutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutBtn;
+
+        /// <summary>
         /// Label20 control.
         /// </summary>
         /// <remarks>

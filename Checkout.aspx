@@ -454,6 +454,7 @@
                 <asp:Label ID="Label28" runat="server" Text="EMAIL: support@bookhaven.com"></asp:Label>
                 <asp:Label ID="Label29" runat="server" Text="TEL: 123-456-789"></asp:Label>
             </div>
+
         </div>                
                                                                            
     </form>
