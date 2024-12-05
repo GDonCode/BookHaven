@@ -177,6 +177,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
+        /// Image2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image2;
+
+        /// <summary>
         /// Title_1 control.
         /// </summary>
         /// <remarks>
@@ -211,6 +220,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// Image3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image3;
 
         /// <summary>
         /// Title_2 control.
@@ -249,6 +267,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
+        /// Image4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image4;
+
+        /// <summary>
         /// Title_3 control.
         /// </summary>
         /// <remarks>
@@ -283,6 +310,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
+
+        /// <summary>
+        /// Image5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image5;
 
         /// <summary>
         /// Title_4 control.
@@ -321,6 +357,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
+        /// Image6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image6;
+
+        /// <summary>
         /// Title_5 control.
         /// </summary>
         /// <remarks>
@@ -355,6 +400,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button5;
+
+        /// <summary>
+        /// Image7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image7;
 
         /// <summary>
         /// Title_6 control.
@@ -393,6 +447,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
+        /// Image12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image12;
+
+        /// <summary>
         /// Title_7 control.
         /// </summary>
         /// <remarks>
@@ -427,6 +490,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button7;
+
+        /// <summary>
+        /// Image13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image13;
 
         /// <summary>
         /// Title_8 control.
@@ -465,6 +537,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button8;
 
         /// <summary>
+        /// Image14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image14;
+
+        /// <summary>
         /// Title_9 control.
         /// </summary>
         /// <remarks>
@@ -499,6 +580,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button9;
+
+        /// <summary>
+        /// Image15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image15;
 
         /// <summary>
         /// Title_10 control.
@@ -537,6 +627,15 @@ namespace BookHaven
         protected global::System.Web.UI.WebControls.Button Button10;
 
         /// <summary>
+        /// Image16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image16;
+
+        /// <summary>
         /// Title_11 control.
         /// </summary>
         /// <remarks>
@@ -571,6 +670,15 @@ namespace BookHaven
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button11;
+
+        /// <summary>
+        /// Image17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image17;
 
         /// <summary>
         /// Title_12 control.
