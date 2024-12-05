@@ -134,22 +134,22 @@
                                         <%--  NAV LINKS --%>
     <div class="nav-link_container">
         <a href="Browse.aspx" class="nav-link">
-            <asp:Image ID="Image8" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
+            <asp:Image ID="browsebook" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/books.png" />
             <asp:Label ID="Label6" runat="server" Text="Browse Books"></asp:Label>
         </a>
         <a href="User.aspx" class="nav-link">
-            <asp:Image ID="Image9" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
+            <asp:Image ID="user" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/user.png" />
             <asp:Label ID="Label7" runat="server" Text="User Account" ></asp:Label>
         </a>
     </div>
-    <a href="Home.aspx" style="text-decoration: none;color: black;"><asp:Image ID="Image1" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px" style="margin: 0 20px;"/></a>
+    <a href="Home.aspx" style="text-decoration: none;color: black;"><asp:Image ID="logo" runat="server" Height="120px" ImageUrl="~/Content/images/logo1.png" Width="120px" style="margin: 0 20px;"/></a>
     <div class="nav-link_container">
         <a href="ContactUs.aspx" class="nav-link">
-            <asp:Image ID="Image10" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
+            <asp:Image ID="contact" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/contact-us.png" />
             <asp:Label ID="Label8" runat="server" Text="Contact Us"></asp:Label>
         </a>
         <a href="Cart.aspx" class="nav-link">
-            <asp:Image ID="Image11" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/shopping-cart.png" />
+            <asp:Image ID="cart" runat="server" Height="20px" Width="20px" ImageUrl="~/Content/images/shopping-cart.png" />
             <asp:Label ID="Label9" runat="server" Text="Shopping Cart"></asp:Label>
         </a>
     </div>
@@ -162,30 +162,30 @@
 
                 <div class="filter-section">
                     <asp:Label ID="Label2" runat="server" Text="CATEGORY" class="filter-section_heading"></asp:Label>
-                    <asp:CheckBoxList ID="Category_CheckBox" runat="server">
+                    <asp:RadioButtonList ID="RadioButtonList2" runat="server">
                         <asp:ListItem Value="Mystery">Mystery</asp:ListItem>
                         <asp:ListItem Value="Science Fiction">Science Fiction</asp:ListItem>
                         <asp:ListItem Value="Biography">Biography</asp:ListItem>
                         <asp:ListItem Value="History">History</asp:ListItem>
                         <asp:ListItem Value="Romance">Romance</asp:ListItem>
                         <asp:ListItem Value="Thriller">Thriller</asp:ListItem>
-                    </asp:CheckBoxList>
+                    </asp:RadioButtonList>
                 </div>
 
                 <div class="filter-section">
                     <asp:Label ID="Label3" runat="server" Text="PRICE" class="filter-section_heading"></asp:Label>
-                    <asp:CheckBoxList ID="Price_CheckBox" runat="server" OnSelectedIndexChanged="Price_Selected">
+                    <asp:RadioButtonList ID="Price_RadioButtonList" runat="server" OnSelectedIndexChanged="'Price_Filter">
                         <asp:ListItem Value="10-25">$10 - $25</asp:ListItem>
                         <asp:ListItem Value="25-50">$25 - $50</asp:ListItem>
                         <asp:ListItem Value="50-75">$50 - $75</asp:ListItem>
                         <asp:ListItem Value="75-99">$75 - $99</asp:ListItem>
                         <asp:ListItem Value="100">$100 +</asp:ListItem>
-                    </asp:CheckBoxList>
+                    </asp:RadioButtonList>
                 </div>
 
                 <div class="filter-section">
                     <asp:Label ID="Label4" runat="server" Text="AUTHOR" class="filter-section_heading"></asp:Label>
-                    <asp:CheckBoxList ID="Author_CheckBox" runat="server">
+                    <asp:RadioButtonList ID="RadioButtonList3" runat="server">
                         <asp:ListItem Value="A.J. Finn">A.J. Finn</asp:ListItem>
                         <asp:ListItem Value="Alex Michaelides">Alex Michaelides</asp:ListItem>
                         <asp:ListItem Value="Colleen Hoover">Colleen Hoover</asp:ListItem>
@@ -198,7 +198,7 @@
                         <asp:ListItem Value="Ursula K. Le Guin">Ursula K. Le Guin</asp:ListItem>
                         <asp:ListItem Value="Walter Isaacson">Walter Isaacson</asp:ListItem>
                         <asp:ListItem Value="Yuval Noah Harari">Yuval Noah Harari</asp:ListItem>
-                    </asp:CheckBoxList>
+                    </asp:RadioButtonList>
                 </div>
             </div>
 
@@ -207,84 +207,84 @@
                 <asp:Label ID="Label5" runat="server" Text="SEARCH" style="margin-left: 40px;font-size: 1.75rem;font-weight: 500;"></asp:Label>
                 <div class="books_grid">
                     <div class="item" id="Item_1">
-                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Content/images/becoming.jpg" class="book-cover"/>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Content/images/becoming.jpg" class="book-cover"/>
                         <asp:Label ID="Title_1" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_1" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_1" runat="server" Text="$10.00"></asp:Label>
                         <asp:Button ID="Button1" runat="server" CommandArgument="1" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_2">
-                        <asp:Image ID="Image3" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image2" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_2" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_2" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_2" runat="server" Text="$20.00"></asp:Label>
                         <asp:Button ID="Button2" runat="server" CommandArgument="2" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_3">
-                        <asp:Image ID="Image4" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image3" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_3" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_3" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_3" runat="server" Text="$30.00"></asp:Label>
                         <asp:Button ID="Button3" runat="server"  CommandArgument="3" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_4">
-                        <div id="Cover_4"><asp:Image ID="Image5" runat="server" ImageUrl="2" class="book-cover"/></div>
+                        <asp:Image ID="Image4" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_4" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_4" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_4" runat="server" Text="$50.00"></asp:Label>
                         <asp:Button ID="Button4" runat="server"  CommandArgument="4" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_5">
-                        <asp:Image ID="Image6" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image5" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_5" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_5" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_5" runat="server" Text="$60.00"></asp:Label>
                         <asp:Button ID="Button5" runat="server" CommandArgument="5" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_6">
-                        <asp:Image ID="Image7" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image6" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_6" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_6" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_6" runat="server" Text="$70.00"></asp:Label>
                         <asp:Button ID="Button6" runat="server" CommandArgument="6" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_7">
-                        <asp:Image ID="Image12" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image7" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_7" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_7" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_7" runat="server" Text="$80.00"></asp:Label>
                         <asp:Button ID="Button7" runat="server" CommandArgument="7" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_8">
-                        <asp:Image ID="Image13" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image8" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_8" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_8" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_8" runat="server" Text="$90.00"></asp:Label>
                         <asp:Button ID="Button8" runat="server" CommandArgument="8" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_9">
-                        <asp:Image ID="Image14" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image9" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_9" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_9" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_9" runat="server" Text="$100.00"></asp:Label>
                         <asp:Button ID="Button9" runat="server" CommandArgument="9" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_10">
-                        <asp:Image ID="Image15" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image10" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_10" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_10" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_10" runat="server" Text="$105.00"></asp:Label>
                         <asp:Button ID="Button10" runat="server" CommandArgument="10" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_11">
-                        <asp:Image ID="Image16" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image11" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_11" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_11" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_11" runat="server" Text="$110.00"></asp:Label>
                         <asp:Button ID="Button11" runat="server" CommandArgument="11" Text="Add to Cart" class="add_to_cart" OnClick="AddToCartBtn"/>
                     </div>
                     <div class="item" id="Item_12">
-                        <asp:Image ID="Image17" runat="server" ImageUrl="2" class="book-cover"/>
+                        <asp:Image ID="Image12" runat="server" ImageUrl="2" class="book-cover"/>
                         <asp:Label ID="Title_12" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Author_12" runat="server" Text=""></asp:Label>
                         <asp:Label ID="Price_12" runat="server" Text="$120.00"></asp:Label>

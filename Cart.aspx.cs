@@ -11,7 +11,10 @@ namespace BookHaven
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Title1"] != null)
+            {
+                Item_1.Visible = true;
+            }
         }
     }
 }

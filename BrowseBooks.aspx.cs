@@ -36,49 +36,6 @@ namespace BookHaven
             };
         }
 
-
-
-        protected void Price_Selected(object sender, EventArgs e)
-        {
-            
-            List<string> selectedRanges = new List<string>();
-            foreach (ListItem item in Price_CheckBox.Items)
-            {
-                if (item.Selected)
-                {
-                    selectedRanges.Add(item.Value);
-                }
-            }
-
-            
-            foreach (Book book in bookprices)
-            {
-                bool isVisible = false;
-
-                
-                foreach (string range in selectedRanges)
-                {
-                    Response.Write($"Selected Range: {range}");
-                    string[] bounds = range.Split('-');
-                    decimal minPrice = decimal.Parse(bounds[0]);
-                    decimal maxPrice = bounds.Length > 1 ? decimal.Parse(bounds[1]) : decimal.MaxValue;
-
-                    if (book.Price >= minPrice && book.Price <= maxPrice)
-                    {
-                        isVisible = true;
-                        break;
-                    }
-                }
-
-                
-                var itemDiv = FindControl(book.ItemId) as HtmlGenericControl; 
-                if (itemDiv != null)
-                {
-                    itemDiv.Visible = isVisible;
-                }
-            }
-        }
-
         protected void AddToCartBtn(object sender, EventArgs e)
         {
            int CartCounter = 0;
@@ -87,97 +44,97 @@ namespace BookHaven
             if (Button1.CommandArgument == "1")
             {
                 Session["Cover"] = "";
-                Session["Title"] = Title_1.Text;
-                Session["Author"] = Author_1.Text;
-                Session["Price"] = int.Parse(Price_1.Text);
+                Session["Title1"] = Title_1.Text;
+                Session["Author1"] = Author_1.Text;
+                Session["Price1"] = int.Parse(Price_1.Text);
             }
 
             if (Button2.CommandArgument == "2")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_2.Text;
-                Session["Author"] = Author_2.Text;
-                Session["Price"] = int.Parse(Price_2.Text);
+                Session["Cover2"] = "";
+                Session["Title2"] = Title_2.Text;
+                Session["Author2"] = Author_2.Text;
+                Session["Price2"] = int.Parse(Price_2.Text);
             }
 
             if (Button3.CommandArgument == "3")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_3.Text;
-                Session["Author"] = Author_3.Text;
-                Session["Price"] = int.Parse(Price_3.Text);
+                Session["Cover3"] = "";
+                Session["Title3"] = Title_3.Text;
+                Session["Author3"] = Author_3.Text;
+                Session["Price3"] = int.Parse(Price_3.Text);
             }
 
             if (Button4.CommandArgument == "4")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_4.Text;
-                Session["Author"] = Author_4.Text;
-                Session["Price"] = int.Parse(Price_4.Text);
+                Session["Cover4"] = "";
+                Session["Title4"] = Title_4.Text;
+                Session["Author4"] = Author_4.Text;
+                Session["Price4"] = int.Parse(Price_4.Text);
             }
 
             if (Button5.CommandArgument == "5")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_5.Text;
-                Session["Author"] = Author_5.Text;
-                Session["Price"] = int.Parse(Price_5.Text);
+                Session["Cover5"] = "";
+                Session["Title5"] = Title_5.Text;
+                Session["Author5"] = Author_5.Text;
+                Session["Price5"] = int.Parse(Price_5.Text);
             }
 
             if (Button6.CommandArgument == "6")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_6.Text;
-                Session["Author"] = Author_6.Text;
-                Session["Price"] = int.Parse(Price_6.Text);
+                Session["Cover6"] = "";
+                Session["Title6"] = Title_6.Text;
+                Session["Author6"] = Author_6.Text;
+                Session["Price6"] = int.Parse(Price_6.Text);
             }
 
             if (Button7.CommandArgument == "7")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_7.Text;
-                Session["Author"] = Author_7.Text;
-                Session["Price"] = int.Parse(Price_7.Text);
+                Session["Cover7"] = "";
+                Session["Title7"] = Title_7.Text;
+                Session["Author7"] = Author_7.Text;
+                Session["Price7"] = int.Parse(Price_7.Text);
             }
 
             if (Button8.CommandArgument == "8")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_8.Text;
-                Session["Author"] = Author_8.Text;
-                Session["Price"] = int.Parse(Price_8.Text);
+                Session["Cover8"] = "";
+                Session["Title8"] = Title_8.Text;
+                Session["Author8"] = Author_8.Text;
+                Session["Price8"] = int.Parse(Price_8.Text);
             }
 
             if (Button9.CommandArgument == "9")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_9.Text;
-                Session["Author"] = Author_9.Text;
-                Session["Price"] = int.Parse(Price_9.Text);
+                Session["Cover9"] = "";
+                Session["Title9"] = Title_9.Text;
+                Session["Author9"] = Author_9.Text;
+                Session["Price9"] = int.Parse(Price_9.Text);
             }
 
             if (Button10.CommandArgument == "10")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_10.Text;
-                Session["Author"] = Author_10.Text;
-                Session["Price"] = int.Parse(Price_10.Text);
+                Session["Cover10"] = "";
+                Session["Title10"] = Title_10.Text;
+                Session["Author10"] = Author_10.Text;
+                Session["Price10"] = int.Parse(Price_10.Text);
             }
 
             if (Button11.CommandArgument == "11")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_11.Text;
-                Session["Author"] = Author_11.Text;
-                Session["Price"] = int.Parse(Price_11.Text);
+                Session["Cover11"] = "";
+                Session["Title11"] = Title_11.Text;
+                Session["Author11"] = Author_11.Text;
+                Session["Price11"] = int.Parse(Price_11.Text);
             }
 
             if (Button12.CommandArgument == "12")
             {
-                Session["Cover"] = "";
-                Session["Title"] = Title_12.Text;
-                Session["Author"] = Author_12.Text;
-                Session["Price"] = int.Parse(Price_12.Text);
+                Session["Cover12"] = "";
+                Session["Title12"] = Title_12.Text;
+                Session["Author12"] = Author_12.Text;
+                Session["Price12"] = int.Parse(Price_12.Text);
             }
 
         }
